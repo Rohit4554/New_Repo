@@ -1,0 +1,54 @@
+<html>
+	
+	<head>
+		<script src = "jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#form").submit(function (event){
+					event.preventDefault();
+					
+				let username = $("#username").val().trim();
+				let password = $("#password").val().trim();
+				let isValid = true;
+
+				let usernameRegex = /^[a-zA-Z0-9_]{5,}$/;
+				if(!usernameRegex.test(username))
+				{
+					$("#usernameError").text("Username must be aleast 5 Characters and contain only letters, numbers and _");
+					isValid = false;
+				}
+				else
+				{
+					$("usernameError").text("");
+				}
+
+				let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+				if(!passwordRegex.test(password))
+				{
+					$("#passwordError").text("Password must be aleast 5 Characters and contain only letters, numbers and _");
+					isValid = false;
+				}
+
+				if(isValid)
+				{
+					alert("Form Submitted sucessfully");	
+					this.submit();
+				}
+				});		
+			});
+		</script>
+	<head>
+
+	<body>
+		<form id = "form">
+			<label for = "username">Username</label>
+			<input type = "text" id = "username" name = "username">
+			<span id = "usernameError"></span>
+			<br>
+			<label for = "password">Password</label>
+			<input type = "text" id = "password" name = "password">	
+			<span id = "passwordError"></span>
+			<br>
+			<button type = "submit">Submit</button>	
+	</body>
+</html>

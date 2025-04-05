@@ -1,0 +1,16 @@
+<html>
+    <head><title>Self Processing Page </title></head>
+    <body>
+        <?php
+        if($_SERVER['REQUEST_METHOD']=='GET')
+        {
+        ?>
+        <form name="f1" action="<?php echo $_SERVER['PHP_SELF']?> method='POST">
+            <input type="text" name="t1"><br>
+            <input type="submit" name="SB">
+        </form>
+        <?php
+        }
+        
+    </body>
+</html>

@@ -1,0 +1,42 @@
+\
+b1
+CREATE TABLE TEACHER (
+    tno INT PRIMARY KEY AUTO_INCREMENT,
+    tname VARCHAR(50) NOT NULL,
+    qualification VARCHAR(100),
+    salary DECIMAL(10,2)
+);
+
+INSERT INTO TEACHER (tname, qualification, salary) VALUES
+('John Doe', 'M.Sc, Ph.D.', 75000),
+('Jane Smith', 'M.A, B.Ed', 68000),
+('Robert Brown', 'B.Sc, M.Ed', 72000);
+
+
+b2
+
+CREATE TABLE CUSTOMER (
+    cno INT PRIMARY KEY AUTO_INCREMENT,
+    cname VARCHAR(50) NOT NULL,
+    city VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE ORDERS (
+    ono INT PRIMARY KEY AUTO_INCREMENT,
+    cno INT,
+    odate DATE,
+    shipping_address VARCHAR(255),
+    FOREIGN KEY (cno) REFERENCES CUSTOMER(cno) ON DELETE CASCADE
+);
+
+-- Insert sample customers
+INSERT INTO CUSTOMER (cname, city) VALUES
+('John Doe', 'New York'),
+('Jane Smith', 'Los Angeles'),
+('Robert Brown', 'Chicago');
+
+-- Insert sample orders (linked to customers)
+INSERT INTO ORDERS (cno, odate, shipping_address) VALUES
+(1, '2024-03-10', '123 Main St, New York'),
+(1, '2024-03-15', '456 Park Ave, New York'),
+(2, '2024-02-25', '789 Sunset Blvd, Los Angeles');

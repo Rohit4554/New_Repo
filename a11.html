@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Exam Preparation Reminder</title>
+	</head>
+
+	<body>
+		<h2>Exam Preparation Reminder</h2>
+		<button onclick = "checkPreparation()">Check your Preparation</button>
+
+		<script>
+			function checkPreparation()
+			{
+				let name = prompt("Enter your name");
+				let isPreparing = confirm(name+" Have you started Preparing for the exams");
+				
+				if(isPreparing)
+				{
+					alert("Great! Keep up the good work");
+				}
+				else
+				{
+					alert("No worries Start preparing soon!");
+				}
+			}
+
+		</script>
+	</body>
+
+</html>

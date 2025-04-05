@@ -1,0 +1,46 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+	<MovieList>
+		<Movie>
+			<Movieno>1</Movieno>
+			<MovieTitle>Sarfarosh</MovieTitle>
+			<ActorName>Amir Khan</ActorName>
+			<ReleaseYear>2004</ReleaseYear>
+		</Movie>
+		
+		 <Movie>
+                        <Movieno>2</Movieno>
+                        <MovieTitle>Ra.One</MovieTitle>
+                        <ActorName>Shah Rukh Khan</ActorName>
+                        <ReleaseYear>2010</ReleaseYear>
+                </Movie>
+		
+		 <Movie>
+                        <Movieno>3</Movieno>
+                        <MovieTitle>Badlapur</MovieTitle>
+                        <ActorName>Varun Dhawan</ActorName>
+                        <ReleaseYear>2014</ReleaseYear>
+                </Movie>
+	
+		 <Movie>
+                        <Movieno>3</Movieno>
+                        <MovieTitle>Bajrangi Bhaijan</MovieTitle>
+                        <ActorName>Salman Khan</ActorName>
+                        <ReleaseYear>2016</ReleaseYear>
+                </Movie>
+
+		 <Movie>
+                        <Movieno>4</Movieno>
+                        <MovieTitle>Tanhaji: Unsung Warrior</MovieTitle>
+                        <ActorName>Ajay Devgn</ActorName>
+                        <ReleaseYear>2020</ReleaseYear>
+                </Movie>
+
+		 <Movie>
+                        <Movieno>5</Movieno>
+                        <MovieTitle>Iron Man</MovieTitle>
+                        <ActorName>Tony Stark</ActorName>
+                        <ReleaseYear>2008</ReleaseYear>
+                </Movie>
+
+	</MovieList>

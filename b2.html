@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<script src = "jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#btn1').click(function(){
+					let input = prompt("Enter the text for before");
+					$("img").before("<h1>"+input+"</h1>");
+				});
+
+				$('#btn2').click(function(){
+				let input = prompt("Enter the text for after");
+				$("img").after("<h1>"+input+"</h1>");
+				});	
+			});
+		</script>
+	<head>
+
+	<body>
+		<img src = "image.png" width = 100px height = 100px>
+		<button id = "btn1">Insert Before</button>
+		<button id = "btn2">Insert After</button>
+	</body>
+
+</html>

@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Student</title>
+	</head>
+	<style>
+		#studentImage {
+			display: none;
+			width: 100px;
+			transition: 0.3s;
+		}						
+	</style>
+	<script>
+		let value = 0;
+		function handleInput()
+		{
+			let input = document.getElementById("studentName");
+			input.style.color = input.value? "red":"black";
+			input.style.fontSize = input.value? "18px": "16px";
+		}
+		function toggleImage()
+		{
+			
+			let img = document.getElementById("studentImage");
+			img.style.display = "block";
+		}
+		function changeSize()
+		{
+			let img = document.getElementById("studentImage");
+			if(value == 0)
+			{
+				img.style.width = "150px";
+				value = 1;	
+			}
+			else if(value == 1)
+			{
+				img.style.width = "200px";
+				value = 0;
+			}
+		}
+	</script>	
+	<body onload = "alert('Page Loaded')">
+		<input type = "text" id = "studentName" onblur = "handleInput()" onclick = "toggleImage()">
+		<br><br>
+		<img id = "studentImage" src = "image.png" onClick = "changeSize()">
+		
+	<body>
+</html>

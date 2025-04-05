@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Boxes in Javascript</title>
+	</head>
+
+	<body>
+		<h2>Exam Preparation Reminder</h2>
+		<button onclick = "checkPreparation()">Check your Preparation</button>
+
+		<script>
+			function checkPreparation()
+			{
+				alert("Exams are near, have you started Preparing");
+				let isPreparing = confirm("Have you started Preparing for the exams");
+				
+				if(isPreparing)
+				{
+					alert("Great! Keep up the good work");
+				}
+				else
+				{
+					let reason = prompt("Oh no! Whats stopping you from starting?");
+					if(reason)
+					{
+						alert("Try to overcome " + reason + " all the best");
+					}
+					else
+					{
+						alert("No worries! Start preparing soon");
+					}
+				}
+			}
+
+		</script>
+	</body>
+
+</html>

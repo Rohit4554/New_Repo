@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Append in paragraph and list</title>
+		<script src = "jquery.min.js"></script>
+	</head>
+	<body>
+		<p id = "para">This is a paragraph</p>
+		<button id = "addText">Add Text</button>
+
+		<ol id = "list">
+			<li>Item1</li>
+			<li>Item2</li>
+		</ol>
+		<button id = "addItem">Add list Item</button>
+
+	<script>
+		$(document).ready(function(){
+			$("#addText").click(function(){
+				let input = prompt("enter some text");
+				$("#para").append(input);
+			}
+			);
+			$("#addItem").click(function(){
+				let input = prompt("Enter a list item");
+				$("#list").append("<li>"+input+"</li>");
+			});		
+
+		});
+	</script>	
+	</body>
+
+</html>
